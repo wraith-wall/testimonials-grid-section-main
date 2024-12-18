@@ -37,6 +37,7 @@ body {
       "jeanette patrick patrick kira";
     column-gap: 30px;
     row-gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
   }
   &__student {
     padding-top: 26px;
@@ -65,5 +66,27 @@ body {
   &__patrick {
     grid-area: patrick;
     background-color: $very-dark-blackish-blue-color;
+  }
+}
+
+@media (min-width: 1440px) {
+  .testimonials__grid {
+    &__student {
+      width: 255px;
+      height: 282px;
+    }
+    &__daniel {
+      width: 540px;
+    }
+    &__patrick {
+      width: 540px;
+      height: 266px;
+    }
+    &__kira {
+      height: 572px;
+    }
+    &__jeanette {
+      height: 266px;
+    }
   }
 }
