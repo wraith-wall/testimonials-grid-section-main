@@ -30,6 +30,35 @@ body {
   &__title {
     display: none;
   }
+  &__name {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  &__verified {
+    margin-top: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  &__heading {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &__text {
+    margin-top: 24px;
+    font-weight: 500;
+    line-height: 138%;
+    font-size: 13px;
+    opacity: 0.7;
+    &--daniel {
+      margin-top: 16px;
+    }
+    &--jonathan {
+      margin-top: 16px;
+    }
+  }
   &__grid {
     display: grid;
     grid-template-areas:
@@ -37,7 +66,10 @@ body {
       "jeanette patrick patrick kira";
     column-gap: 30px;
     row-gap: 24px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    max-width: 1110px;
+    max-height: 572px;
+    margin: auto;
   }
   &__student {
     padding-top: 26px;
@@ -49,44 +81,61 @@ body {
     grid-area: daniel;
     padding-bottom: 32px;
     background-color: $moderately-violet-color;
+    width: 540px;
+    height: 282px;
   }
   &__jonathan {
     grid-area: jonathan;
     padding-bottom: 32px;
     background-color: $very-dark-grayish-blue-color;
+    width: 255px;
+    height: 282px;
   }
   &__kira {
     grid-area: kira;
     background-color: $white-color;
+    width: 255px;
+    height: 572px;
   }
   &__jeanette {
     grid-area: jeanette;
     background-color: $white-color;
+    width: 255px;
+    height: 266px;
   }
   &__patrick {
     grid-area: patrick;
     background-color: $very-dark-blackish-blue-color;
+    width: 540px;
+    height: 266px;
   }
 }
 
-@media (min-width: 1440px) {
-  .testimonials__grid {
-    &__student {
-      width: 255px;
-      height: 282px;
-    }
-    &__daniel {
-      width: 540px;
-    }
-    &__patrick {
-      width: 540px;
-      height: 266px;
-    }
-    &__kira {
-      height: 572px;
-    }
-    &__jeanette {
-      height: 266px;
-    }
-  }
-}
+// @media (min-width: 1440px) {
+//   .testimonials__grid {
+//     grid-template-columns: 540px minmax(255px, 1fr) minmax(255px, 1fr) minmax(
+//         255px,
+//         1fr
+//       );
+//     grid-template-rows: 282px minmax(266px, auto);
+//     column-gap: 30px;
+//     row-gap: 24px;
+//     // &__student {
+//     //   width: 255px;
+//     //   height: 282px;
+//     // }
+//     // &__daniel {
+//     //   width: 540px;
+//     // }
+//     // &__patrick {
+//     //   width: 540px;
+//     //   height: 266px;
+//     // }
+//     // &__kira {
+//     //   height: 572px;
+//     // }
+//     // &__jeanette {
+//     //   height: 266px;
+//     // }
+//   }
+// }
